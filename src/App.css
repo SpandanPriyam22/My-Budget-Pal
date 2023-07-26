@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -9,19 +11,22 @@
 }
 
 body {
-  background-color: #39065A;
+  background-color: /*#3F0071*/ #511281;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  color: #EDE4FF;
+  color: #B4AEE8;
 }
 
 .container {
   margin: 30px auto;
   width: 350px;
+  padding:30px;
+  border-radius: 15px;
+  background-color: #440A67;
 }
 
 h1 {
@@ -40,8 +45,18 @@ h4 {
   text-transform: uppercase;
 }
 
+#site-name{
+  text-align:center;
+  font-size: 2rem;
+  font-family: "Convergence", sans-serif;
+  color:#ffffff;
+}
+
+#pal{
+  font-style: italic;
+}
 .inc-exp-container {
-  background-color: #b441fb;
+  background-color:/* #b441fb;*/ #380856;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -89,13 +104,13 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #C264FE;
+  background-color: #9c78dd;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px;
+  margin: 20px 0 30px;
   padding: 10px;
   width: 100%;
 }
@@ -155,10 +170,5 @@ input[type='number'] {
     width: 300px;
   }
 }
-.container{
-  padding:30px;
-  border-radius: 15px;
-}
-.container{
-  background-color: #896a9d;
-}
+
+
