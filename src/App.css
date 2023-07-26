@@ -27,6 +27,7 @@ body {
   padding:30px;
   border-radius: 15px;
   background-color: #440A67;
+  box-shadow: 0px 50px 100px rgba(160, 160, 255, 0.5);
 }
 
 h1 {
@@ -168,6 +169,8 @@ input[type='number'] {
 @media (max-width: 320px) {
   .container {
     width: 300px;
+    padding: 5px;
+    box-shadow: 0px 50px 100px rgba(160, 160, 255, 0.5);
   }
 }
 
