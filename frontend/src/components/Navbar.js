@@ -9,7 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { loggedIn, handleLogout } = useContext(AuthContext);
   return (
-    <Stack flexDirection={'row'} justifyContent={'space-around'}>
+    <Stack flexDirection={'row'} justifyContent={'space-around'} alignItems={'center'}>
       <Header />
       {loggedIn ? (
         <Stack direction="row" gap="30px" height="40px">

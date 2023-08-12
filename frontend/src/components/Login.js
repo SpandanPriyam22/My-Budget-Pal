@@ -58,7 +58,7 @@ const Login = () => {
 
   return (
     <Stack padding={'50px'} className='body' alignItems={'center'} justifyContent={'center'} 
-    sx={{background:"linear-gradient(0deg, #010B1B 10.9%,#102661 97.1%)"}}>
+    sx={{background:"#511281"}}>
     {/* <div className="background">
       <div className="shape"></div>
       <div className="shape"></div>
@@ -99,8 +99,8 @@ const Login = () => {
 
       <style>{`
         
-        .body {
-          background-color: #080710;
+        body {
+          background-color: #511281;
         }
         .login-msg{
           margin-top: 10px;

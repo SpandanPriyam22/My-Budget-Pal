@@ -61,31 +61,15 @@ export default function SignUp() {
   };
 
   return (
-    <Grid container component="main" height={"100vh"}>
+    <Grid justifyContent={'center'} alignItems={'center'} container component="main" height={"100vh"}>
       <CssBaseline />
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={6}
-        sx={{
-          // backgroundImage: `url(${pic})`,
-          backgroundRepeat: "no-repeat",
-          backgroundColor: (t) =>
-            t.palette.mode === "light"
-              ? t.palette.grey[50]
-              : t.palette.grey[900],
-          backgroundSize: "cover",
-          backgroundPosition: "right",
-        }}
-      />
       <Grid
         item
         xs={12}
         sm={8}
-        md={6}
+        md={3}
         component={Paper}
-        elevation={6}
+        elevation={4}
         square
         sx={{
           background: "linear-gradient(0deg, #010B1B 10.9%,#102661 97.1%)",
@@ -220,6 +204,9 @@ export default function SignUp() {
       </Grid>
       <style>
         {`
+        body{
+          background:#511281;
+        }
         .message{
           /*SignUp message*/
           padding: 8px;
