@@ -45,7 +45,7 @@ const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        {loggedIn?(<button className="btn">Add transaction</button>):(<p>Log In To use the App</p>)}
+        {loggedIn?(<button className="btn">Add transaction</button>):(<p >Log In To Use The App</p>)}
         
       </form>
     </>
