@@ -1,11 +1,12 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import { AuthContext } from "../context/AuthContext"
 
-export const AddTransaction = () => {
+const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
-
   const { addTransaction } = useContext(GlobalContext);
+  const { loggedIn } = useContext(AuthContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -44,8 +45,10 @@ export const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        <button className="btn">Add transaction</button>
+        {loggedIn?(<button className="btn">Add transaction</button>):(<p>Log In To use the App</p>)}
+        
       </form>
     </>
   );
 };
+export default AddTransaction;
