@@ -6,6 +6,7 @@ import "./App.css";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </GlobalProvider>
     </AuthProvider>
