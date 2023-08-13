@@ -15,12 +15,14 @@ export const AuthProvider = ({ children }) => {
 
   const handleLoginSuccess = () => {
     setLoggedIn(true);
+    // window.location.reload();
   };
 
   const handleLogout = () => {
     // Clear the token from local storage on logout
     localStorage.removeItem("token");
     setLoggedIn(false);
+    window.location.reload();
   };
 
   return (

@@ -44,6 +44,7 @@ const Login = () => {
       setTimeout(() => {
         clearInterval(timer);
         navigate("/");
+        window.location.reload();
       }, 5000);
     } catch (error) {
       if (error.response && error.response.data.error) {

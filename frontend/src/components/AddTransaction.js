@@ -1,22 +1,31 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { AuthContext } from "../context/AuthContext"
-
+import { AuthContext } from "../context/AuthContext";
+import axios from "axios";
 const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
   const { addTransaction } = useContext(GlobalContext);
   const { loggedIn } = useContext(AuthContext);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount,
     };
-
+    try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        throw new Error("No token found");
+      }
+      await axios.post("http://localhost:5000/api/transactions", newTransaction, {
+        headers: { Authorization: token },
+      });
+    } catch (error) {
+      console.error("Error adding transaction:", error);
+    }
     addTransaction(newTransaction);
   };
 
@@ -45,8 +54,11 @@ const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        {loggedIn?(<button className="btn">Add transaction</button>):(<p >Log In To Use The App</p>)}
-        
+        {loggedIn ? (
+          <button className="btn">Add transaction</button>
+        ) : (
+          <p>Log In To Use The App</p>
+        )}
       </form>
     </>
   );
